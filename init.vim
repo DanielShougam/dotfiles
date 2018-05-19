@@ -21,7 +21,8 @@ autocmd FileType tex inoremap ;c <Esc>:w<Enter>:vs<Enter><C-w><C-w>:terminal<Ent
 set bg=dark
 set relativenumber
 set number
-set colorcolumn=80
+set colorcolumn=81
+highlight colorcolumn ctermbg=7
 
 filetype plugin indent on
 set tabstop=4
