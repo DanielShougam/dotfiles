@@ -2,7 +2,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'https://github.com/majutsushi/tagbar.git'
-Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git'
 
 call plug#end()
