@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'https://github.com/majutsushi/tagbar.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git'
+Plug 'https://github.com/euclio/vim-markdown-composer'
 
 call plug#end()
 
@@ -17,7 +18,7 @@ autocmd FileType tex inoremap ;i $\textit{}$<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;b $\textbf{}$<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;c <Esc>:w<Enter>:vs<Enter><C-w><C-w>:terminal<Enter>apdflatex<Space>file.tex<Enter><C-\><C-n>
 
-set bg=dark
+set bg=light
 set relativenumber
 set number
 set colorcolumn=81

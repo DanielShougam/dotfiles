@@ -6,11 +6,14 @@ apt-get install software-properties-common
 apt-add-repository ppa:neovim-ppa/stable
 apt-get update
 apt-get install build-essential i3 vim python python3 python-pip python3-pip \
-    curl neovim cmake python-dev python3-dev dconf-cli dmenu i3status 
+    curl neovim cmake python-dev python3-dev dconf-cli dmenu i3status cargo feh
 pip install setuptools
 pip3 install setuptools
 pip3 install neovim
 pip install neovim
+pip3 install pywal
+
+wal -i wallpaper.png
 
 # terminal colours
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
