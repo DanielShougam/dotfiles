@@ -18,7 +18,7 @@ autocmd FileType tex inoremap ;i $\textit{}$<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;b $\textbf{}$<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;c <Esc>:w<Enter>:vs<Enter><C-w><C-w>:terminal<Enter>apdflatex<Space>file.tex<Enter><C-\><C-n>
 
-set bg=light
+set bg=dark
 set relativenumber
 set number
 
