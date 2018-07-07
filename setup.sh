@@ -7,12 +7,14 @@ apt-add-repository ppa:neovim-ppa/stable
 apt-get update
 apt-get install build-essential i3 vim python python3 python-pip python3-pip \
     curl neovim cmake python-dev python3-dev dconf-cli dmenu i3status cargo feh \
-    rxvt-unicode
+    rxvt-unicode zsh xcb-proto libxcb-ewmh-dev python-xcbgen
 pip install setuptools
 pip3 install setuptools
 pip3 install neovim
 pip install neovim
 pip3 install pywal
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 wal -i wallpaper.png
 
@@ -53,3 +55,11 @@ sudo make install
 
 cp i3_config ~/.config/i3/config
 cp Xresources ~/.Xresources
+
+# polybar
+git clone --branch 3.1.0 --recursive https://github.com/jaagr/polybar
+mkdir polybar/build
+cd polybar/build
+cmake ..
+make install
+cd ../../
