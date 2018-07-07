@@ -6,7 +6,8 @@ apt-get install software-properties-common
 apt-add-repository ppa:neovim-ppa/stable
 apt-get update
 apt-get install build-essential i3 vim python python3 python-pip python3-pip \
-    curl neovim cmake python-dev python3-dev dconf-cli dmenu i3status cargo feh
+    curl neovim cmake python-dev python3-dev dconf-cli dmenu i3status cargo feh \
+    rxvt-unicode
 pip install setuptools
 pip3 install setuptools
 pip3 install neovim
@@ -49,3 +50,6 @@ mkdir -p build && cd build/
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 sudo make install
+
+cp i3_config ~/.config/i3/config
+cp Xresources ~/.Xresources
