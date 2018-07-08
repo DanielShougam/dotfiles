@@ -18,10 +18,6 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 wal -i wallpaper.png
 
-# terminal colours
-git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
-gnome-terminal-colors-solarized/install.sh
-
 # neovim setup
 mkdir -p ../.config/nvim
 cp ./init.vim ../.config/nvim/init.vim
@@ -49,6 +45,7 @@ add-apt-repository ppa:aguignard/ppa
 apt-get update
 apt-get install libxcb-xrm-dev
 
+cd ../
 git clone https://www.github.com/Airblader/i3 i3-gaps
 cd i3-gaps
 autoreconf --force --install
@@ -58,7 +55,7 @@ mkdir -p build && cd build/
 make
 sudo make install
 
-cd ../../
+cd ../../dotfiles
 
 cp i3_config ~/.config/i3/config
 cp Xresources ~/.Xresources
