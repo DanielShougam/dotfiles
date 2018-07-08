@@ -11,6 +11,14 @@
 
 set $mod Mod1
 
+# pywal
+exec wal -R
+
+# volume up, down, mute
+bindsym $mod+Shift+u exec amixer -q set Master 2%+ unmute
+bindsym $mod+Shift+d exec amixer -q set Master 2%- unmute
+bindsym $mod+Shift+m exec amixer -q -D pulse set Master toggle
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
