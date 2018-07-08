@@ -7,7 +7,7 @@ apt-add-repository ppa:neovim-ppa/stable
 apt-get update
 apt-get install build-essential i3 vim python python3 python-pip python3-pip \
     curl neovim cmake python-dev python3-dev dconf-cli dmenu i3status cargo feh \
-    rxvt-unicode zsh xcb-proto libxcb-ewmh-dev python-xcbgen
+    rxvt-unicode zsh xcb-proto libxcb-ewmh-dev python-xcbgen rofi htop
 pip install setuptools
 pip3 install setuptools
 pip3 install neovim
@@ -63,3 +63,5 @@ cd polybar/build
 cmake ..
 make install
 cd ../../
+
+cp polybar_config ~/.config/polybar/config

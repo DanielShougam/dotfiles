@@ -14,6 +14,9 @@ set $mod Mod1
 # pywal
 exec wal -R
 
+# polybar
+exec polybarstart
+
 # volume up, down, mute
 bindsym $mod+Shift+u exec amixer -q set Master 2%+ unmute
 bindsym $mod+Shift+d exec amixer -q set Master 2%- unmute
@@ -48,8 +51,8 @@ bindsym $mod+Return exec rxvt-unicode -e zsh
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# run rofi
+bindsym $mod+d exec rofi -modi drun -show drun
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -166,7 +169,8 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-        tray_output primary
-}
+
+#bar {
+ #       status_command i3status
+  #      tray_output primary
+#}
