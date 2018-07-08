@@ -31,6 +31,11 @@ nvim +PlugInstall +qall
 
 sudo python3 ~/.local/share/nvim/plugged/YouCompleteMe/install.py --clang-completer
 
+chmod +rwx ~/.local/share/nvim
+cd ~/.local/share/nvim/plugged/vim-markdown-composer
+cargo build --release
+cd ~/dotfiles
+
 # vs code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
@@ -53,6 +58,8 @@ mkdir -p build && cd build/
 make
 sudo make install
 
+cd ../../
+
 cp i3_config ~/.config/i3/config
 cp Xresources ~/.Xresources
 
@@ -64,4 +71,6 @@ cmake ..
 make install
 cd ../../
 
+cp polybarstart /usr/local/bin
+chmod +x /usr/local/bin/polybarstart
 cp polybar_config ~/.config/polybar/config
